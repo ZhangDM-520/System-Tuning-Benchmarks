@@ -1,0 +1,89 @@
+=== adopted settings, read from where they are consumed ===
+    (host 7.2.5-1-cachyos-rt-bore-lto / boot 2026-09-18 22:35:27 / 2026-09-18 22:38 HKT)
+  PASS  xfs logbsize                       logbsize=256k
+  PASS  cfg80211 regdom                    HK
+  PASS  vm.min_free_kbytes                 262144
+  PASS  vm.watermark_scale_factor          10
+  PASS  vm.swappiness                      150
+  INFO  swappiness owner                   /usr/lib/udev/rules.d/30-zram.rules
+  PASS  wlan0 power save                   off
+  PASS  NM powersave config                2
+  PASS  nvme APST                          Enabled
+  PASS  nvme APST first ITPT               100
+  PASS  NM-wait-online link gone           absent
+  PASS  cups forced-start link gone        absent
+  PASS  avahi forced-start link gone       absent
+  PASS  cups.socket enabled (activation kept) enabled
+  PASS  avahi-daemon.socket enabled (activation kept) enabled
+  PASS  cups.path enabled (activation kept) enabled
+  INFO  cups.service                       active, activated on demand by cups.socket,cups.path
+  INFO  avahi-daemon.service               inactive - never started this boot
+  PASS  power-profiles-daemon masked       masked
+  PASS  power-profiles-daemon inactive     inactive
+  PASS  asusd active                       active
+  PASS  asusd AC profile                   Balanced
+  PASS  asusd battery profile              Quiet
+  INFO  transparent hugepage               absent - PREEMPT_RT build, user declined to change kernel
+
+=== boot time ===
+    baseline (2026-09-18 pre-change): 22.997s total, 11.066s userspace, 8.024s to graphical.target
+    verified (2026-09-18 post-change): 17.343s total, 6.128s userspace, 5.660s to graphical.target
+  Startup finished in 6.035s (firmware) + 430ms (loader) + 1.676s (kernel) + 3.072s (initrd) + 6.128s (userspace) = 17.343s 
+  graphical.target reached after 5.660s in userspace.
+  units that all previously cost boot time:
+     616ms plymouth-read-write.service
+     173ms plymouth-start.service
+     155ms plymouth-quit-wait.service
+     155ms plymouth-quit.service
+      20ms plymouth-switch-root.service
+      16ms cups.service
+      67us avahi-daemon.socket
+      20us cups.socket
+
+=== workload comparison: before vs after this audit ===
+control band-mempress  n=5
+    metric                         after-mempress
+    wall s                 -0.0% p=0.917    
+    pkg J                  -5.4% p=0.602    
+    avg W                  -6.0% p=0.251    
+    psi io some ms         +4.3% p=0.917    
+    psi io FULL ms        +11.4% p=0.917    
+    psi mem FULL ms        +4.8% p=0.917    
+    psi cpu some ms       +21.5% p=0.347    
+    read ios              -22.6% p=0.117    
+    write ios              -0.7% p=0.009 SIG
+    flush ios              +0.0% p=0.136    
+    dev busy ms            -4.0% p=0.465    
+    qmean us               +5.1% p=0.602    
+    log FORCE              +0.0% p=0.136    
+    log blocks            -45.5% p=0.249    
+    trans commit           +9.4% p=0.047 SIG
+    ail pushes             +9.4% p=0.047 SIG
+    majflt                -64.6% p=0.175    
+    kswapd scan            -1.7% p=0.917    
+    DIRECT scan            +0.0% p=0.113    
+    kswapd steal          -38.5% p=0.016 SIG
+    DIRECT steal       +33571.1% p=0.116    
+    pswpout                -4.1% p=0.917    
+
+    SIG = Mann-Whitney p < 0.05 (rank-separated, outlier-immune)
+
+control band-coldmeta  n=5
+    metric                         after-coldmeta
+    wall s                 +4.7% p=0.076    
+    pkg J                  +0.2% p=0.465    
+    avg W                  -1.8% p=0.530    
+    psi io some ms         -8.9% p=0.175    
+    psi io FULL ms         -6.3% p=0.175    
+    psi cpu some ms       +17.1% p=0.917    
+    read ios               +0.1% p=0.117    
+    dev busy ms            +0.7% p=0.175    
+    qmean us               +0.0% p=0.396    
+    trans commit                                -
+    ail pushes                                  -
+    majflt                 -6.2% p=0.917    
+
+    SIG = Mann-Whitney p < 0.05 (rank-separated, outlier-immune)
+
+=== summary: 20 passed, 0 failed, 0 pending, 4 informational ===
+All adopted settings are live.

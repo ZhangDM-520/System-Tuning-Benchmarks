@@ -1,0 +1,205 @@
+
+=== base-coldmeta  rep1  wall=0.464s  2.897J pkg (6.24W)  bat=0uWh
+    PSI        io some=0ms full=0ms | mem full=0ms | cpu some=3ms
+    nvme       r=3279 w=0 flush=0 sectors r=99040 w=0 busy=347ms qmean=105.8us
+    xfs        {"push_ail.0": 4, "trans.1": 4}
+    reclaim    majflt=2 direct_scan=0 direct_steal=0 pswpout=0 zram_orig=0 zram_compr=0 zram_mem=0
+
+=== base-coldmeta  rep2  wall=0.467s  2.998J pkg (6.43W)  bat=0uWh
+    PSI        io some=0ms full=0ms | mem full=0ms | cpu some=3ms
+    nvme       r=3285 w=0 flush=0 sectors r=98496 w=0 busy=340ms qmean=103.2us
+    xfs        {"push_ail.0": 4, "trans.1": 4}
+    reclaim    majflt=2 direct_scan=0 direct_steal=0 pswpout=0 zram_orig=0 zram_compr=0 zram_mem=0
+
+=== base-coldmeta  rep3  wall=0.452s  3.215J pkg (7.11W)  bat=0uWh
+    PSI        io some=0ms full=0ms | mem full=0ms | cpu some=3ms
+    nvme       r=3304 w=0 flush=0 sectors r=99560 w=0 busy=326ms qmean=103.2us
+    xfs        {"push_ail.0": 4, "trans.1": 4}
+    reclaim    majflt=5 direct_scan=0 direct_steal=0 pswpout=0 zram_orig=0 zram_compr=0 zram_mem=0
+
+=== base-coldmeta  rep4  wall=0.467s  2.865J pkg (6.14W)  bat=0uWh
+    PSI        io some=0ms full=0ms | mem full=0ms | cpu some=4ms
+    nvme       r=3280 w=0 flush=0 sectors r=98984 w=0 busy=340ms qmean=104.0us
+    xfs        {"push_ail.0": 4, "trans.1": 4}
+    reclaim    majflt=3 direct_scan=0 direct_steal=0 pswpout=0 zram_orig=0 zram_compr=0 zram_mem=0
+
+=== base-coldmeta  rep5  wall=0.468s  2.896J pkg (6.18W)  bat=0uWh
+    PSI        io some=0ms full=0ms | mem full=0ms | cpu some=5ms
+    nvme       r=3304 w=0 flush=0 sectors r=99880 w=0 busy=296ms qmean=103.5us
+    xfs        {"push_ail.0": 4, "trans.1": 4}
+    reclaim    majflt=2 direct_scan=0 direct_steal=0 pswpout=0 zram_orig=0 zram_compr=0 zram_mem=0
+gen_tree: 24000 files in 160 dirs under $HOME/fs-latency/rmtree
+gen_tree: 24000 files in 160 dirs under $HOME/fs-latency/rmtree
+gen_tree: 24000 files in 160 dirs under $HOME/fs-latency/rmtree
+gen_tree: 24000 files in 160 dirs under $HOME/fs-latency/rmtree
+
+=== base-rm  rep1  wall=0.422s  3.948J pkg (9.35W)  bat=0uWh
+    PSI        io some=0ms full=0ms | mem full=0ms | cpu some=14ms
+    nvme       r=73 w=0 flush=0 sectors r=584 w=0 busy=0ms qmean=95.9us
+    xfs        {"push_ail.0": 169287, "push_ail.2": 8, "trans.1": 169287}
+    reclaim    majflt=0 direct_scan=0 direct_steal=0 pswpout=0 zram_orig=0 zram_compr=0 zram_mem=0
+
+=== base-rm  rep2  wall=0.448s  5.084J pkg (11.35W)  bat=0uWh
+    PSI        io some=0ms full=0ms | mem full=0ms | cpu some=26ms
+    nvme       r=1450 w=0 flush=0 sectors r=36512 w=0 busy=114ms qmean=89.7us
+    xfs        {"push_ail.0": 207758, "push_ail.2": 9, "trans.1": 207759}
+    reclaim    majflt=0 direct_scan=0 direct_steal=0 pswpout=0 zram_orig=0 zram_compr=0 zram_mem=0
+
+=== base-rm  rep3  wall=0.711s  16.883J pkg (23.76W)  bat=0uWh
+    PSI        io some=0ms full=0ms | mem full=0ms | cpu some=35ms
+    nvme       r=943 w=331 flush=3 sectors r=20632 w=84677 busy=130ms qmean=171.1us
+    xfs        {"log.0": 166, "log.1": 84677, "log.2": 13, "log.3": 1, "log.4": 1, "push_ail.0": 328488, "push_ail.2": 13, "trans.1": 328488}
+    reclaim    majflt=0 direct_scan=0 direct_steal=0 pswpout=0 zram_orig=0 zram_compr=0 zram_mem=0
+
+=== base-rm  rep4  wall=0.636s  7.944J pkg (12.5W)  bat=0uWh
+    PSI        io some=1ms full=0ms | mem full=0ms | cpu some=35ms
+    nvme       r=1414 w=0 flush=0 sectors r=35568 w=0 busy=130ms qmean=106.8us
+    xfs        {"push_ail.0": 302133, "push_ail.2": 12, "trans.1": 302141}
+    reclaim    majflt=10 direct_scan=0 direct_steal=0 pswpout=0 zram_orig=0 zram_compr=0 zram_mem=0
+
+=== base-wbig  rep1  wall=2.071s  40.562J pkg (19.59W)  bat=0uWh
+    PSI        io some=90ms full=64ms | mem full=0ms | cpu some=136ms
+    nvme       r=6292 w=33063 flush=11 sectors r=131535 w=8436118 busy=1780ms qmean=3723.1us
+    xfs        {"log.0": 93, "log.1": 46762, "log.2": 25, "log.3": 2, "log.4": 4, "push_ail.0": 414919, "push_ail.2": 39, "push_ail.9": 1, "trans.1": 414924}
+    reclaim    majflt=2 direct_scan=0 direct_steal=0 pswpout=0 zram_orig=0 zram_compr=0 zram_mem=0
+
+=== base-wbig  rep2  wall=1.745s  40.749J pkg (23.35W)  bat=0uWh
+    PSI        io some=88ms full=67ms | mem full=0ms | cpu some=98ms
+    nvme       r=4936 w=33033 flush=10 sectors r=107663 w=8422332 busy=1533ms qmean=2990.8us
+    xfs        {"log.0": 66, "log.1": 33019, "log.2": 1, "log.3": 1, "log.4": 4, "push_ail.0": 312790, "push_ail.2": 32, "push_ail.3": 14, "push_ail.5": 101, "push_ail.9": 2, "trans.1": 312789}
+    reclaim    majflt=43 direct_scan=0 direct_steal=0 pswpout=0 zram_orig=0 zram_compr=0 zram_mem=0
+
+=== base-wbig  rep3  wall=1.925s  43.526J pkg (22.61W)  bat=0uWh
+    PSI        io some=98ms full=75ms | mem full=0ms | cpu some=86ms
+    nvme       r=6611 w=33036 flush=12 sectors r=140520 w=8426246 busy=1654ms qmean=3781.8us
+    xfs        {"log.0": 73, "log.1": 37054, "log.2": 1, "log.3": 1, "log.4": 4, "push_ail.0": 344704, "push_ail.2": 36, "push_ail.5": 69, "push_ail.9": 2, "trans.1": 344707}
+    reclaim    majflt=38 direct_scan=0 direct_steal=0 pswpout=0 zram_orig=0 zram_compr=0 zram_mem=0
+
+=== base-wbig  rep4  wall=1.981s  29.873J pkg (15.08W)  bat=0uWh
+    PSI        io some=83ms full=68ms | mem full=0ms | cpu some=64ms
+    nvme       r=333 w=32888 flush=1 sectors r=15978 w=8389266 busy=1563ms qmean=3845.8us
+    xfs        {"log.0": 1, "log.1": 25, "log.3": 1, "log.4": 1, "push_ail.0": 812, "push_ail.2": 1, "push_ail.3": 8, "trans.1": 812}
+    reclaim    majflt=43 direct_scan=0 direct_steal=0 pswpout=0 zram_orig=0 zram_compr=0 zram_mem=0
+
+=== base-wbig  rep5  wall=1.962s  25.769J pkg (13.13W)  bat=0uWh
+    PSI        io some=72ms full=55ms | mem full=0ms | cpu some=58ms
+    nvme       r=250 w=32885 flush=1 sectors r=7612 w=8389299 busy=1583ms qmean=3207.3us
+    xfs        {"log.0": 1, "log.1": 26, "log.3": 1, "log.4": 1, "push_ail.0": 986, "push_ail.2": 1, "push_ail.3": 12, "trans.1": 986}
+    reclaim    majflt=2 direct_scan=0 direct_steal=0 pswpout=0 zram_orig=0 zram_compr=0 zram_mem=0
+PROBE launch_under_load_ms=616
+PROBE launch_under_load_ms=428
+PROBE launch_under_load_ms=448
+PROBE launch_under_load_ms=425
+PROBE launch_under_load_ms=472
+
+=== base-launchunderload  rep1  wall=3.796s  42.457J pkg (11.18W)  bat=0uWh
+    PSI        io some=165ms full=130ms | mem full=0ms | cpu some=89ms
+    nvme       r=2242 w=65707 flush=4 sectors r=219659 w=16778616 busy=3144ms qmean=2256.9us
+    xfs        {"log.0": 3, "log.1": 496, "log.3": 3, "log.4": 3, "push_ail.0": 2856, "trans.1": 2856}
+    reclaim    majflt=681 direct_scan=0 direct_steal=0 pswpout=0 zram_orig=0 zram_compr=0 zram_mem=0
+
+=== base-launchunderload  rep2  wall=3.888s  48.231J pkg (12.41W)  bat=0uWh
+    PSI        io some=105ms full=84ms | mem full=0ms | cpu some=88ms
+    nvme       r=35 w=65712 flush=2 sectors r=1418 w=16778254 busy=3020ms qmean=3011.2us
+    xfs        {"log.0": 2, "log.1": 414, "log.3": 2, "log.4": 2, "push_ail.0": 3075, "trans.1": 3075}
+    reclaim    majflt=9 direct_scan=0 direct_steal=0 pswpout=0 zram_orig=0 zram_compr=0 zram_mem=0
+
+=== base-launchunderload  rep3  wall=3.929s  57.762J pkg (14.7W)  bat=0uWh
+    PSI        io some=113ms full=83ms | mem full=0ms | cpu some=131ms
+    nvme       r=118 w=65726 flush=4 sectors r=2401 w=16779054 busy=3126ms qmean=2640.1us
+    xfs        {"log.0": 3, "log.1": 494, "log.3": 3, "log.4": 3, "push_ail.0": 2926, "trans.1": 2926}
+    reclaim    majflt=5 direct_scan=0 direct_steal=0 pswpout=0 zram_orig=0 zram_compr=0 zram_mem=0
+
+=== base-launchunderload  rep4  wall=4.335s  47.347J pkg (10.92W)  bat=0uWh
+    PSI        io some=92ms full=67ms | mem full=0ms | cpu some=135ms
+    nvme       r=5 w=65773 flush=2 sectors r=160 w=16790016 busy=3290ms qmean=2607.5us
+    xfs        {"log.0": 2, "log.1": 296, "log.3": 2, "log.4": 2, "push_ail.0": 2765, "trans.1": 2765}
+    reclaim    majflt=1 direct_scan=0 direct_steal=0 pswpout=0 zram_orig=0 zram_compr=0 zram_mem=0
+
+=== base-launchunderload  rep5  wall=3.923s  48.485J pkg (12.36W)  bat=0uWh
+    PSI        io some=120ms full=88ms | mem full=0ms | cpu some=136ms
+    nvme       r=7 w=66073 flush=4 sectors r=128 w=16812623 busy=2957ms qmean=4169.2us
+    xfs        {"log.0": 4, "log.1": 325, "log.3": 3, "log.4": 2, "push_ail.0": 2685, "push_ail.2": 22, "push_ail.3": 246, "push_ail.5": 101, "push_ail.7": 5, "push_ail.9": 1, "trans.1": 2685}
+    reclaim    majflt=0 direct_scan=0 direct_steal=0 pswpout=0 zram_orig=0 zram_compr=0 zram_mem=0
+
+=== base-mempress  rep1  wall=11.218s  176.995J pkg (15.78W)  bat=0uWh
+    PSI        io some=105ms full=89ms | mem full=260ms | cpu some=173ms
+    nvme       r=5077 w=17856 flush=10 sectors r=480087 w=4310905 busy=1660ms qmean=686.2us
+    xfs        {"log.0": 10, "log.1": 2796, "log.3": 6, "log.4": 6, "push_ail.0": 6306, "push_ail.2": 104, "push_ail.3": 699, "push_ail.5": 46, "push_ail.7": 32, "push_ail.9": 2, "trans.1": 6305}
+    reclaim    majflt=6079 direct_scan=144105 direct_steal=143892 pswpout=215947 zram_orig=864657408 zram_compr=322928775 zram_mem=335237120
+
+=== base-mempress  rep2  wall=11.545s  189.534J pkg (16.42W)  bat=0uWh
+    PSI        io some=74ms full=57ms | mem full=481ms | cpu some=165ms
+    nvme       r=2297 w=16691 flush=3 sectors r=192357 w=4195432 busy=1167ms qmean=722.4us
+    xfs        {"log.0": 3, "log.1": 53, "log.3": 3, "log.4": 3, "push_ail.0": 1198, "push_ail.2": 3, "push_ail.3": 26, "trans.1": 1198}
+    reclaim    majflt=101312 direct_scan=703501 direct_steal=19334 pswpout=167641 zram_orig=273727488 zram_compr=93409989 zram_mem=97099776
+
+=== base-mempress  rep3  wall=11.101s  130.326J pkg (11.74W)  bat=0uWh
+    PSI        io some=72ms full=55ms | mem full=43ms | cpu some=118ms
+    nvme       r=1248 w=16704 flush=1 sectors r=108814 w=4195386 busy=1114ms qmean=572.5us
+    xfs        {"log.0": 1, "log.1": 39, "log.3": 1, "log.4": 1, "push_ail.0": 1216, "push_ail.2": 1, "push_ail.3": 22, "trans.1": 1215}
+    reclaim    majflt=2998 direct_scan=303 direct_steal=330 pswpout=2487 zram_orig=-372736 zram_compr=-627453 zram_mem=352256
+
+=== base-mempress  rep4  wall=11.403s  139.507J pkg (12.23W)  bat=0uWh
+    PSI        io some=104ms full=89ms | mem full=17ms | cpu some=176ms
+    nvme       r=3877 w=16724 flush=1 sectors r=328876 w=4195578 busy=1480ms qmean=765.5us
+    xfs        {"log.0": 1, "log.1": 25, "log.3": 1, "log.4": 1, "push_ail.0": 1068, "push_ail.2": 1, "push_ail.3": 15, "trans.1": 1068}
+    reclaim    majflt=6872 direct_scan=97 direct_steal=97 pswpout=8711 zram_orig=-167936 zram_compr=3418411 zram_mem=4775936
+
+=== base-mkstorm  rep1  wall=5.743s  102.773J pkg (17.9W)  bat=0uWh
+    PSI        io some=5ms full=4ms | mem full=0ms | cpu some=278ms
+    nvme       r=17274 w=24720 flush=67 sectors r=689568 w=1807062 busy=3803ms qmean=1026.2us
+    xfs        {"log.0": 641, "log.1": 322646, "log.2": 76, "log.3": 4, "log.4": 22, "push_ail.0": 1265523, "push_ail.1": 1189, "push_ail.2": 34, "push_ail.3": 2253, "push_ail.5": 1709, "push_ail.9": 17, "trans.1": 1265523}
+    reclaim    majflt=711 direct_scan=0 direct_steal=0 pswpout=0 zram_orig=-2678784 zram_compr=-807829 zram_mem=-12288
+
+=== base-mkstorm  rep2  wall=5.084s  86.905J pkg (17.09W)  bat=0uWh
+    PSI        io some=9ms full=7ms | mem full=0ms | cpu some=238ms
+    nvme       r=17351 w=24091 flush=69 sectors r=731216 w=1799276 busy=3426ms qmean=853.6us
+    xfs        {"log.0": 625, "log.1": 315492, "log.2": 61, "log.3": 1, "log.4": 20, "push_ail.0": 1265508, "push_ail.2": 36, "push_ail.3": 2228, "push_ail.5": 1717, "push_ail.9": 17, "trans.1": 1265508}
+    reclaim    majflt=3239 direct_scan=0 direct_steal=0 pswpout=0 zram_orig=-20258816 zram_compr=-6954857 zram_mem=-3014656
+
+=== base-mkstorm  rep3  wall=4.992s  87.576J pkg (17.54W)  bat=0uWh
+    PSI        io some=3ms full=3ms | mem full=0ms | cpu some=262ms
+    nvme       r=17101 w=24364 flush=64 sectors r=682856 w=1799050 busy=3390ms qmean=966.8us
+    xfs        {"log.0": 628, "log.1": 316890, "log.2": 26, "log.3": 1, "log.4": 20, "push_ail.0": 1265507, "push_ail.2": 37, "push_ail.3": 2138, "push_ail.5": 1716, "push_ail.6": 1, "push_ail.7": 1190, "push_ail.9": 17, "trans.1": 1265507}
+    reclaim    majflt=1568 direct_scan=0 direct_steal=0 pswpout=0 zram_orig=-5525504 zram_compr=-1578632 zram_mem=-24576
+PROBE launch_under_load_ms=455
+PROBE launch_under_load_ms=492
+PROBE launch_under_load_ms=418
+PROBE launch_under_load_ms=410
+PROBE launch_under_load_ms=412
+
+=== base-launchunderload  rep1  wall=3.756s  37.352J pkg (9.94W)  bat=0uWh
+    PSI        io some=134ms full=110ms | mem full=0ms | cpu some=79ms
+    nvme       r=40 w=65729 flush=2 sectors r=3320 w=16778219 busy=3063ms qmean=1933.3us
+    xfs        {"log.0": 2, "log.1": 227, "log.3": 2, "log.4": 2, "push_ail.0": 2643, "push_ail.2": 70, "trans.1": 2643}
+    reclaim    majflt=5845 direct_scan=0 direct_steal=0 pswpout=0 zram_orig=-23461888 zram_compr=-4991026 zram_mem=-1744896
+    probe      {"launch_under_load_ms": 455}
+
+=== base-launchunderload  rep2  wall=3.949s  44.208J pkg (11.19W)  bat=0uWh
+    PSI        io some=143ms full=109ms | mem full=0ms | cpu some=107ms
+    nvme       r=6 w=65698 flush=2 sectors r=688 w=16778050 busy=3060ms qmean=2027.3us
+    xfs        {"log.0": 2, "log.1": 202, "log.3": 2, "log.4": 2, "push_ail.0": 2569, "push_ail.2": 73, "trans.1": 2569}
+    reclaim    majflt=57 direct_scan=0 direct_steal=0 pswpout=0 zram_orig=-212992 zram_compr=-60907 zram_mem=-12288
+    probe      {"launch_under_load_ms": 492}
+
+=== base-launchunderload  rep3  wall=3.765s  45.682J pkg (12.13W)  bat=0uWh
+    PSI        io some=131ms full=89ms | mem full=0ms | cpu some=120ms
+    nvme       r=5 w=65710 flush=2 sectors r=880 w=16778077 busy=2907ms qmean=3178.1us
+    xfs        {"log.0": 2, "log.1": 221, "log.3": 2, "log.4": 2, "push_ail.0": 2513, "push_ail.2": 69, "trans.1": 2513}
+    reclaim    majflt=33 direct_scan=0 direct_steal=0 pswpout=0 zram_orig=-118784 zram_compr=-56473 zram_mem=-24576
+    probe      {"launch_under_load_ms": 418}
+
+=== base-launchunderload  rep4  wall=3.73s  60.076J pkg (16.11W)  bat=0uWh
+    PSI        io some=135ms full=107ms | mem full=0ms | cpu some=93ms
+    nvme       r=346 w=65695 flush=2 sectors r=39000 w=16778077 busy=3103ms qmean=1839.5us
+    xfs        {"log.0": 2, "log.1": 229, "log.3": 2, "log.4": 2, "push_ail.0": 2505, "push_ail.2": 69, "trans.1": 2505}
+    reclaim    majflt=7001 direct_scan=0 direct_steal=0 pswpout=0 zram_orig=-29257728 zram_compr=-9169988 zram_mem=-512000
+    probe      {"launch_under_load_ms": 410}
+
+=== base-launchunderload  rep5  wall=3.799s  46.22J pkg (12.17W)  bat=0uWh
+    PSI        io some=107ms full=80ms | mem full=0ms | cpu some=105ms
+    nvme       r=15 w=65708 flush=2 sectors r=872 w=16778079 busy=2970ms qmean=3041.1us
+    xfs        {"log.0": 2, "log.1": 239, "log.3": 2, "log.4": 2, "push_ail.0": 2564, "push_ail.2": 71, "trans.1": 2564}
+    reclaim    majflt=52 direct_scan=0 direct_steal=0 pswpout=0 zram_orig=-188416 zram_compr=-65180 zram_mem=-20480
+    probe      {"launch_under_load_ms": 412}

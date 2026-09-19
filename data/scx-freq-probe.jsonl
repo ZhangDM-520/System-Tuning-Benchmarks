@@ -1,0 +1,12 @@
+{"window": "idle", "arm_wall_s": 8.02, "J": 0.0, "W": 0.0, "freq_mean_mhz": 954.5, "freq_max_mhz": 2820.2, "freq_min_mhz": 605.3, "freq_n": 384, "arm": "bore", "rep": 0}
+{"window": "mem", "arm_wall_s": 11.3, "J": 0.0, "W": 0.0, "freq_mean_mhz": 1008.3, "freq_max_mhz": 5034.9, "freq_min_mhz": 605.3, "freq_n": 528, "arm": "bore", "rep": 0}
+{"window": "idle", "arm_wall_s": 8.02, "J": 0.0, "W": 0.0, "freq_mean_mhz": 904.3, "freq_max_mhz": 2289.3, "freq_min_mhz": 605.3, "freq_n": 384, "arm": "pandemonium", "rep": 0}
+{"window": "mem", "arm_wall_s": 11.96, "J": 0.0, "W": 0.0, "freq_mean_mhz": 941.3, "freq_max_mhz": 3290.0, "freq_min_mhz": 605.3, "freq_n": 528, "arm": "pandemonium", "rep": 0}
+{"window": "idle", "arm_wall_s": 8.02, "J": 0.0, "W": 0.0, "freq_mean_mhz": 855.2, "freq_max_mhz": 2821.1, "freq_min_mhz": 605.3, "freq_n": 384, "arm": "bore", "rep": 1}
+{"window": "mem", "arm_wall_s": 11.34, "J": 0.0, "W": 0.0, "freq_mean_mhz": 840.4, "freq_max_mhz": 5095.1, "freq_min_mhz": 605.3, "freq_n": 528, "arm": "bore", "rep": 1}
+{"window": "idle", "arm_wall_s": 8.02, "J": 0.0, "W": 0.0, "freq_mean_mhz": 886.8, "freq_max_mhz": 2679.6, "freq_min_mhz": 605.3, "freq_n": 384, "arm": "pandemonium", "rep": 1}
+{"window": "mem", "arm_wall_s": 11.95, "J": 0.0, "W": 0.0, "freq_mean_mhz": 911.5, "freq_max_mhz": 3287.7, "freq_min_mhz": 605.3, "freq_n": 528, "arm": "pandemonium", "rep": 1}
+{"window": "idle", "arm_wall_s": 8.02, "J": 0.0, "W": 0.0, "freq_mean_mhz": 862.5, "freq_max_mhz": 2681.2, "freq_min_mhz": 605.3, "freq_n": 384, "arm": "bore", "rep": 2}
+{"window": "mem", "arm_wall_s": 11.29, "J": 0.0, "W": 0.0, "freq_mean_mhz": 1032.1, "freq_max_mhz": 5141.4, "freq_min_mhz": 605.3, "freq_n": 528, "arm": "bore", "rep": 2}
+{"window": "idle", "arm_wall_s": 8.02, "J": 0.0, "W": 0.0, "freq_mean_mhz": 843.4, "freq_max_mhz": 2198.0, "freq_min_mhz": 605.3, "freq_n": 384, "arm": "pandemonium", "rep": 2}
+{"window": "mem", "arm_wall_s": 11.96, "J": 0.0, "W": 0.0, "freq_mean_mhz": 917.1, "freq_max_mhz": 3287.0, "freq_min_mhz": 605.3, "freq_n": 528, "arm": "pandemonium", "rep": 2}

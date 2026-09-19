@@ -1,0 +1,65 @@
+=== scx A/B run: 6 arms x 3 reps, scale=1.0 ===
+    arms: bore, cake, pandemonium, pandemonium@--no-adaptive, bpfland@-m performance, bpfland@-s 3000
+    results -> $HOME/fs-latency/scx-results.jsonl
+
+--- rep 0  order: bore -> cake -> pandemonium -> pandemonium@--no-adaptive -> bpfland@-m performance -> bpfland@-s 3000
+    set_arm bore: ok=True attach=712ms ops='' state=disabled
+    slot done: valid=True bogo_rate=8125.48 wk99=995 hb=2.513
+    [ok ] bore           55.6s  
+    set_arm cake: ok=True attach=10ms ops='cake_1.2.1_x86_64_unknown_linux_gnu' state=enabled
+    slot done: valid=True bogo_rate=8091.35 wk99=1150 hb=5.291
+    [ok ] cake           58.0s  
+    set_arm pandemonium: ok=True attach=1732ms ops='pandemonium_5.20.0_x86_64_unknown_linux_gnu' state=enabled
+    slot done: valid=True bogo_rate=8114.32 wk99=1858 hb=2.675
+    [ok ] pandemonium    57.8s  
+    set_arm pandemonium --no-adaptive: ok=True attach=1419ms ops='pandemonium_5.20.0_x86_64_unknown_linux_gnu' state=enabled
+    slot done: valid=True bogo_rate=8100.12 wk99=1922 hb=2.716
+    [ok ] pandemonium    60.8s  
+    set_arm bpfland -m performance: ok=True attach=1719ms ops='bpfland_1.1.3_x86_64_unknown_linux_gnu' state=enabled
+    slot done: valid=True bogo_rate=7934.84 wk99=2660 hb=2.34
+    [ok ] bpfland        56.5s  
+    set_arm bpfland -s 3000: ok=True attach=1420ms ops='bpfland_1.1.3_x86_64_unknown_linux_gnu' state=enabled
+    slot done: valid=True bogo_rate=8108.82 wk99=2644 hb=1.997
+    [ok ] bpfland        57.2s  
+
+--- rep 1  order: cake -> pandemonium -> pandemonium@--no-adaptive -> bpfland@-m performance -> bpfland@-s 3000 -> bore
+    set_arm cake: ok=True attach=11ms ops='cake_1.2.1_x86_64_unknown_linux_gnu' state=enabled
+    slot done: valid=True bogo_rate=8150.19 wk99=1150 hb=5.063
+    [ok ] cake           57.7s  
+    set_arm pandemonium: ok=True attach=1942ms ops='pandemonium_5.20.0_x86_64_unknown_linux_gnu' state=enabled
+    slot done: valid=True bogo_rate=8085.02 wk99=1598 hb=2.74
+    [ok ] pandemonium    58.7s  
+    set_arm pandemonium --no-adaptive: ok=True attach=1827ms ops='pandemonium_5.20.0_x86_64_unknown_linux_gnu' state=enabled
+    slot done: valid=True bogo_rate=8158.87 wk99=1802 hb=2.672
+    [ok ] pandemonium    59.1s  
+    set_arm bpfland -m performance: ok=True attach=1517ms ops='bpfland_1.1.3_x86_64_unknown_linux_gnu' state=enabled
+    slot done: valid=True bogo_rate=8023.61 wk99=2412 hb=2.238
+    [ok ] bpfland        56.2s  
+    set_arm bpfland -s 3000: ok=True attach=1317ms ops='bpfland_1.1.3_x86_64_unknown_linux_gnu' state=enabled
+    slot done: valid=True bogo_rate=8094.34 wk99=2748 hb=2.01
+    [ok ] bpfland        57.0s  
+    set_arm bore: ok=True attach=1016ms ops='' state=disabled
+    slot done: valid=True bogo_rate=8072.96 wk99=188 hb=2.466
+    [ok ] bore           56.0s  
+
+--- rep 2  order: pandemonium -> pandemonium@--no-adaptive -> bpfland@-m performance -> bpfland@-s 3000 -> bore -> cake
+    set_arm pandemonium: ok=True attach=1925ms ops='pandemonium_5.20.0_x86_64_unknown_linux_gnu' state=enabled
+    slot done: valid=True bogo_rate=8156.86 wk99=1878 hb=2.695
+    [ok ] pandemonium    59.3s  
+    set_arm pandemonium --no-adaptive: ok=True attach=1718ms ops='pandemonium_5.20.0_x86_64_unknown_linux_gnu' state=enabled
+    slot done: valid=True bogo_rate=8148.1 wk99=2164 hb=2.692
+    [ok ] pandemonium    60.2s  
+    set_arm bpfland -m performance: ok=True attach=1318ms ops='bpfland_1.1.3_x86_64_unknown_linux_gnu' state=enabled
+    slot done: valid=True bogo_rate=8061.12 wk99=2540 hb=2.554
+    [ok ] bpfland        56.3s  
+    set_arm bpfland -s 3000: ok=True attach=1114ms ops='bpfland_1.1.3_x86_64_unknown_linux_gnu' state=enabled
+    slot done: valid=True bogo_rate=8120.76 wk99=2620 hb=2.096
+    [ok ] bpfland        57.0s  
+    set_arm bore: ok=True attach=616ms ops='' state=disabled
+    slot done: valid=True bogo_rate=8111.05 wk99=222 hb=2.483
+    [ok ] bore           55.6s  
+    set_arm cake: ok=True attach=9ms ops='cake_1.2.1_x86_64_unknown_linux_gnu' state=enabled
+    slot done: valid=True bogo_rate=8131.17 wk99=1394 hb=5.188
+    [ok ] cake           57.3s  
+
+=== run complete in 17.3 min ===

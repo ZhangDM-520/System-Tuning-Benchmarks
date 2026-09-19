@@ -1,0 +1,169 @@
+=== scx deep pass 'deepA2': 3 arms x 4 reps, mode=phase ===
+    arms: bore, pandemonium, pandemonium@--no-adaptive
+    dur=8s seg=20s cycles=2  results -> $HOME/fs-latency/scx-deep.jsonl
+
+--- rep 0  order: bore -> pandemonium -> pandemonium@--no-adaptive
+      c0 idle     8.0s   87.50J bl=0
+      c0 light    8.0s  137.13J bl=0 sb_wk_pct99_0=1546
+      c0 sat      8.0s  137.36J bl=0 h2_bogo_rate=7989.7
+      c0 storm    8.6s  146.50J bl=0 t2=4.194
+      c0 io       0.3s    5.28J bl=0
+      c0 mem      9.5s  139.24J bl=0
+      c1 idle     8.0s  123.05J bl=0
+      c1 light    8.0s  142.29J bl=0 sb_wk_pct99_0=1574
+      c1 sat      8.1s  137.16J bl=0 h2_bogo_rate=8154.77
+      c1 storm    8.2s  139.54J bl=0 t2=4.018
+      c1 io       0.3s    5.13J bl=0
+      c1 mem      9.5s   92.04J bl=0
+    [bore] slot 89.6s
+      c0 idle     8.0s   29.71J bl=0
+      c0 light    8.0s  143.99J bl=0 sb_wk_pct99_0=2524
+      c0 sat      8.1s  137.30J bl=0 h2_bogo_rate=8205.65
+      c0 storm    8.8s  150.03J bl=0 t2=4.33
+      c0 io       0.4s    3.30J bl=0
+      c0 mem      9.9s   64.70J bl=0
+      c1 idle     8.0s   31.00J bl=0
+      c1 light    8.0s  144.28J bl=0 sb_wk_pct99_0=2588
+      c1 sat      8.1s  137.49J bl=0 h2_bogo_rate=8216.08
+      c1 storm    8.7s  148.05J bl=0 t2=4.244
+      c1 io       0.4s    3.47J bl=0
+      c1 mem     10.0s   68.62J bl=0
+    [pandemonium] slot 91.1s
+      c0 idle     8.0s   28.04J bl=0
+      c0 light    8.0s  144.25J bl=0 sb_wk_pct99_0=1942
+      c0 sat      8.1s  137.57J bl=0 h2_bogo_rate=8245.44
+      c0 storm    8.8s  149.00J bl=0 t2=4.298
+      c0 io       0.3s    3.37J bl=0
+      c0 mem      9.9s   63.84J bl=0
+      c1 idle     8.0s   29.74J bl=0
+      c1 light    8.0s  144.49J bl=0 sb_wk_pct99_0=1838
+      c1 sat      8.1s  137.55J bl=0 h2_bogo_rate=8197.99
+      c1 storm    8.7s  148.80J bl=0 t2=4.298
+      c1 io       0.4s    3.35J bl=0
+      c1 mem      9.9s   63.23J bl=0
+    [pandemonium --no-adaptive] slot 90.7s
+
+--- rep 1  order: pandemonium -> pandemonium@--no-adaptive -> bore
+      c0 idle     8.0s   28.80J bl=0
+      c0 light    8.0s  144.17J bl=0 sb_wk_pct99_0=2636
+      c0 sat      8.1s  137.52J bl=0 h2_bogo_rate=8158.15
+      c0 storm    9.1s  154.33J bl=0 t2=4.545
+      c0 io       0.4s    3.55J bl=0
+      c0 mem      9.9s   67.04J bl=0
+      c1 idle     8.0s   30.98J bl=0
+      c1 light    8.0s  144.23J bl=0 sb_wk_pct99_0=2620
+      c1 sat      8.1s  137.58J bl=0 h2_bogo_rate=8265.78
+      c1 storm    8.7s  147.27J bl=0 t2=4.246
+      c1 io       0.4s    3.13J bl=0
+      c1 mem      9.9s   63.52J bl=0
+    [pandemonium] slot 90.9s
+      c0 idle     8.0s   28.72J bl=0
+      c0 light    8.0s  144.04J bl=0 sb_wk_pct99_0=2156
+      c0 sat      8.1s  137.47J bl=0 h2_bogo_rate=8231.94
+      c0 storm    8.7s  148.34J bl=0 t2=4.258
+      c0 io       0.4s    4.16J bl=0
+      c0 mem      9.9s   62.53J bl=0
+      c1 idle     8.0s   29.66J bl=0
+      c1 light    8.0s  144.22J bl=0 sb_wk_pct99_0=2540
+      c1 sat      8.1s  137.29J bl=0 h2_bogo_rate=8190.02
+      c1 storm    8.8s  150.27J bl=0 t2=4.281
+      c1 io       0.4s    2.78J bl=0
+      c1 mem      9.9s   63.33J bl=0
+    [pandemonium --no-adaptive] slot 90.8s
+      c0 idle     8.0s   30.04J bl=0
+      c0 light    8.0s  144.88J bl=0 sb_wk_pct99_0=1146
+      c0 sat      8.1s  137.35J bl=0 h2_bogo_rate=8223.43
+      c0 storm    8.1s  138.44J bl=0 t2=3.987
+      c0 io       0.3s    4.11J bl=0
+      c0 mem      9.5s   91.09J bl=0
+      c1 idle     8.0s   34.44J bl=0
+      c1 light    8.0s  144.96J bl=0 sb_wk_pct99_0=975
+      c1 sat      8.0s  137.19J bl=0 h2_bogo_rate=8172.99
+      c1 storm    8.2s  139.73J bl=0 t2=4.0
+      c1 io       0.3s    4.45J bl=0
+      c1 mem      9.5s  118.10J bl=0
+    [bore] slot 89.7s
+
+--- rep 2  order: pandemonium@--no-adaptive -> bore -> pandemonium
+      c0 idle     8.0s   28.98J bl=0
+      c0 light    8.0s  144.06J bl=0 sb_wk_pct99_0=2580
+      c0 sat      8.1s  137.49J bl=0 h2_bogo_rate=8207.01
+      c0 storm    8.8s  149.48J bl=0 t2=4.336
+      c0 io       0.4s    3.53J bl=0
+      c0 mem      9.9s   62.95J bl=0
+      c1 idle     8.0s   29.79J bl=0
+      c1 light    8.0s  144.39J bl=0 sb_wk_pct99_0=2026
+      c1 sat      8.1s  137.36J bl=0 h2_bogo_rate=7795.79
+      c1 storm    8.8s  150.44J bl=0 t2=4.293
+      c1 io       0.3s    2.60J bl=0
+      c1 mem     10.0s   64.46J bl=0
+    [pandemonium --no-adaptive] slot 91.2s
+      c0 idle     8.0s   31.07J bl=0
+      c0 light    8.0s  144.88J bl=0 sb_wk_pct99_0=1011
+      c0 sat      8.1s  137.50J bl=0 h2_bogo_rate=8265.66
+      c0 storm    8.2s  139.39J bl=0 t2=4.019
+      c0 io       0.3s    5.43J bl=0
+      c0 mem      9.5s   92.21J bl=0
+      c1 idle     8.0s   34.56J bl=0
+      c1 light    8.0s  145.02J bl=0 sb_wk_pct99_0=949
+      c1 sat      8.0s  137.13J bl=0 h2_bogo_rate=8178.84
+      c1 storm    8.2s  139.69J bl=0 t2=4.018
+      c1 io       0.3s    5.60J bl=0
+      c1 mem      9.5s   92.49J bl=0
+    [bore] slot 89.0s
+      c0 idle     8.0s   29.59J bl=0
+      c0 light    8.0s  144.19J bl=0 sb_wk_pct99_0=2428
+      c0 sat      8.1s  137.33J bl=0 h2_bogo_rate=8211.59
+      c0 storm    8.8s  149.76J bl=0 t2=4.342
+      c0 io       0.4s    3.42J bl=0
+      c0 mem     10.0s   63.60J bl=0
+      c1 idle     8.0s   29.93J bl=0
+      c1 light    8.0s  144.07J bl=0 sb_wk_pct99_0=2404
+      c1 sat      8.1s  137.23J bl=0 h2_bogo_rate=8255.92
+      c1 storm    8.8s  149.36J bl=0 t2=4.306
+      c1 io       0.4s    3.09J bl=0
+      c1 mem     10.0s   64.99J bl=0
+    [pandemonium] slot 91.2s
+
+--- rep 3  order: bore -> pandemonium -> pandemonium@--no-adaptive
+      c0 idle     8.0s   30.61J bl=0
+      c0 light    8.0s  145.07J bl=0 sb_wk_pct99_0=985
+      c0 sat      8.1s  137.28J bl=0 h2_bogo_rate=8196.08
+      c0 storm    8.2s  138.93J bl=0 t2=4.009
+      c0 io       0.3s    4.75J bl=0
+      c0 mem      9.5s   92.10J bl=0
+      c1 idle     8.0s   35.49J bl=0
+      c1 light    8.0s  144.68J bl=0 sb_wk_pct99_0=957
+      c1 sat      8.1s  137.29J bl=0 h2_bogo_rate=8175.72
+      c1 storm    8.2s  139.73J bl=0 t2=3.997
+      c1 io       0.3s    4.82J bl=0
+      c1 mem      9.5s  100.72J bl=0
+    [bore] slot 89.0s
+      c0 idle     8.0s   29.36J bl=0
+      c0 light    8.0s  144.35J bl=0 sb_wk_pct99_0=2092
+      c0 sat      8.1s  137.28J bl=0 h2_bogo_rate=7981.79
+      c0 storm    8.8s  149.26J bl=0 t2=4.298
+      c0 io       0.4s    3.27J bl=0
+      c0 mem     10.0s   64.72J bl=0
+      c1 idle     8.0s   31.93J bl=0
+      c1 light    8.0s  144.17J bl=0 sb_wk_pct99_0=2444
+      c1 sat      8.1s  137.47J bl=0 h2_bogo_rate=8177.56
+      c1 storm    8.7s  148.16J bl=0 t2=4.264
+      c1 io       0.4s    3.32J bl=0
+      c1 mem      9.9s   62.90J bl=0
+    [pandemonium] slot 91.0s
+      c0 idle     8.0s   32.02J bl=0
+      c0 light    8.0s  143.97J bl=0 sb_wk_pct99_0=2052
+      c0 sat      8.1s  137.58J bl=0 h2_bogo_rate=8177.7
+      c0 storm    8.8s  149.58J bl=0 t2=4.316
+      c0 io       0.4s    3.45J bl=0
+      c0 mem      9.9s   62.99J bl=0
+      c1 idle     8.0s   30.47J bl=0
+      c1 light    8.0s  144.39J bl=0 sb_wk_pct99_0=1894
+      c1 sat      8.1s  137.41J bl=0 h2_bogo_rate=8149.69
+      c1 storm    8.8s  148.88J bl=0 t2=4.296
+      c1 io       0.4s    3.20J bl=0
+      c1 mem      9.9s   63.13J bl=0
+    [pandemonium --no-adaptive] slot 90.8s
+
+=== deep run complete in 18.1 min ===

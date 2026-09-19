@@ -1,0 +1,41 @@
+rows=216 kept=214 dropped_by_regime=2 excluded_reps=[0] passes=['deepA', 'deepA2'] bl=any
+
+=== phase idle   n: bore=12  pandemonium=12  pandemonium[--no-adaptive]=12
+    metric                       bore  pandemoniumpandemonium[--no-adaptive]    p(pandem)  p(pandem)
+    phase_J                     33.39        29.76        29.85       0.018*     0.021*
+    phase_W                     4.175         3.72         3.73       0.018*     0.019*
+
+=== phase io   n: bore=12  pandemonium=12  pandemonium[--no-adaptive]=12
+    metric                       bore  pandemoniumpandemonium[--no-adaptive]    p(pandem)  p(pandem)
+    phase_J                     4.882        3.295         3.47       0.000*     0.001*
+    phase_W                     14.37         9.31        9.755       0.000*     0.000*
+    meta_s                     0.0505        0.045       0.0475       0.000*     0.019*
+    dd_s                        0.281        0.309       0.3075       0.001*     0.001*
+
+=== phase light   n: bore=11  pandemonium=12  pandemonium[--no-adaptive]=12
+    metric                       bore  pandemoniumpandemonium[--no-adaptive]    p(pandem)  p(pandem)
+    sb_wk_pct50_0                  11           13           13       0.000*     0.000*
+    sb_wk_pct99_0                1011         2476         2288       0.000*     0.000*
+    sb_wk_max                    4749         5874         5536       0.176      0.140 
+    phase_J                     144.9        144.2        144.2       0.001*     0.001*
+    phase_W                     18.06        17.97        17.97       0.001*     0.001*
+
+=== phase mem   n: bore=11  pandemonium=12  pandemonium[--no-adaptive]=12
+    metric                       bore  pandemoniumpandemonium[--no-adaptive]    p(pandem)  p(pandem)
+    phase_J                      92.1        64.86         63.7       0.000*     0.001*
+    phase_W                      9.68        6.495        6.385       0.000*     0.001*
+    vm_s                        9.513        9.957        9.944       0.000*     0.000*
+
+=== phase sat   n: bore=12  pandemonium=12  pandemonium[--no-adaptive]=12
+    metric                       bore  pandemoniumpandemonium[--no-adaptive]    p(pandem)  p(pandem)
+    h2_bogo_rate                 8194         8212         8199       1.000      0.817 
+    rate_gain                 -0.0008      -0.0003      -0.0035       0.931      0.236 
+    phase_J                     137.3        137.4        137.4       0.073      0.050*
+    phase_W                     17.05        17.06        17.06       0.329      0.156 
+
+=== phase storm   n: bore=12  pandemonium=12  pandemonium[--no-adaptive]=12
+    metric                       bore  pandemoniumpandemonium[--no-adaptive]    p(pandem)  p(pandem)
+    t2                          4.018        4.309        4.295       0.000*     0.000*
+    storm_gain                0.00755       0.0002       0.0002       0.419      0.028*
+    phase_J                     139.7        149.3          149       0.000*     0.000*
+    phase_W                     17.01        17.03        17.02       0.116      0.267 

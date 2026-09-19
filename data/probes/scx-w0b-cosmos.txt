@@ -1,0 +1,63 @@
+=== W0b cosmos characterisation — 2026-09-19T07:50:19+08:00 ===
+start: ops='cake_1.2.1_x86_64_unknown_linux_gnu' state=enabled
+
+-------------------------------------------------- A: shipped default flags
+  args: <default flags>
+  pre : ops=cake_1.2.1_x86_64_unknown_linux_gnu state=enabled
+  attach: 651 ms   ops= state=disabled
+  after 5 s: ops='' state=disabled  -> DIED
+  journal:
+    Error: EXIT: runtime error (ops.init_task() failed (-12) for ksoftirqd/0[15]) on CPU 16
+    [ERROR]: Failed to start scheduler (attempt 4/5)
+    07:50:21 [INFO] scheduler options: scx_cosmos
+    07:50:21 [INFO] Setting up performance counters for 24 CPUs...
+    07:50:21 [INFO] Performance counters configured successfully for all CPUs
+    scx_enable_help[1096] triggered exit kind 1024 on CPU 16:
+      runtime error (ops.init_task() failed (-12) for ksoftirqd/0[15])
+      __scx_exit+0x51/0x70
+                     SCX_EV_ENQ_SKIP_EXITING:                0
+    07:50:21 [INFO] Unregister scx_cosmos scheduler
+    Error: EXIT: runtime error (ops.init_task() failed (-12) for ksoftirqd/0[15]) on CPU 16
+    [ERROR]: Failed to start scheduler (attempt 5/5)
+
+-------------------------------------------------- B: default + --disable-cpufreq
+  args: --disable-cpufreq
+  pre : ops=cake_1.2.1_x86_64_unknown_linux_gnu state=enabled
+  attach: 15858 ms   ops=cake_1.2.1_x86_64_unknown_linux_gnu state=enabled
+  after 5 s: ops='cake_1.2.1_x86_64_unknown_linux_gnu' state=enabled  -> SURVIVED
+  journal:
+    Error: EXIT: runtime error (ops.init_task() failed (-12) for ksoftirqd/0[15]) on CPU 16
+    [ERROR]: Failed to start scheduler (attempt 4/5)
+    07:50:21 [INFO] scheduler options: scx_cosmos
+    07:50:21 [INFO] Setting up performance counters for 24 CPUs...
+    07:50:21 [INFO] Performance counters configured successfully for all CPUs
+    scx_enable_help[1096] triggered exit kind 1024 on CPU 16:
+      runtime error (ops.init_task() failed (-12) for ksoftirqd/0[15])
+      __scx_exit+0x51/0x70
+                     SCX_EV_ENQ_SKIP_EXITING:                0
+    07:50:21 [INFO] Unregister scx_cosmos scheduler
+    Error: EXIT: runtime error (ops.init_task() failed (-12) for ksoftirqd/0[15]) on CPU 16
+    [ERROR]: Failed to start scheduler (attempt 5/5)
+
+-------------------------------------------------- C: locality engine engaged (-c 50)
+  args: -c 50
+  pre : ops=cake_1.2.1_x86_64_unknown_linux_gnu state=enabled
+  attach: 15855 ms   ops=cake_1.2.1_x86_64_unknown_linux_gnu state=enabled
+  after 5 s: ops='cake_1.2.1_x86_64_unknown_linux_gnu' state=enabled  -> SURVIVED
+  journal:
+
+=== W0b summary ===
+  -------------------------------------------------- A: shipped default flags
+    args: <default flags>
+    after 5 s: ops='' state=disabled  -> DIED
+  -------------------------------------------------- B: default + --disable-cpufreq
+    args: --disable-cpufreq
+    after 5 s: ops='cake_1.2.1_x86_64_unknown_linux_gnu' state=enabled  -> SURVIVED
+  -------------------------------------------------- C: locality engine engaged (-c 50)
+    args: -c 50
+    after 5 s: ops='cake_1.2.1_x86_64_unknown_linux_gnu' state=enabled  -> SURVIVED
+
+final: ops=cake_1.2.1_x86_64_unknown_linux_gnu state=enabled
+
+trap recovery:
+  ops=cake_1.2.1_x86_64_unknown_linux_gnu state=enabled

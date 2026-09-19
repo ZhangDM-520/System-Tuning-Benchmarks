@@ -1,0 +1,65 @@
+=== W0c cosmos retest — 2026-09-19T07:51:25+08:00 ===
+start: ops='cake_1.2.1_x86_64_unknown_linux_gnu' state=enabled
+
+================================================== TEST 1: --args plumbing (control, bpfland -m all)
+  target: bpfland [-m all]
+  pre   : ops=cake_1.2.1_x86_64_unknown_linux_gnu state=enabled
+    scxctl: error: a value is required for '--args <ARGS>' but none was supplied
+    scxctl: 
+    scxctl: For more information, try '--help'.
+  attach: 21142 ms   ops='cake_1.2.1_x86_64_unknown_linux_gnu' state=enabled
+  after 5 s: ops='cake_1.2.1_x86_64_unknown_linux_gnu' state=enabled
+  VERDICT  : NO SWITCH (target never attached)
+  banner:
+
+================================================== TEST 2: cosmos, shipped default flags
+  target: cosmos 
+  pre   : ops=cake_1.2.1_x86_64_unknown_linux_gnu state=enabled
+    scxctl: switched to Cosmos in Auto mode
+  attach: 1202 ms   ops='cosmos_1.1.6_x86_64_unknown_linux_gnu' state=disabling
+  after 5 s: ops='' state=disabled
+  VERDICT  : DIED (attached then torn down)
+  banner:
+                     SCX_EV_REFILL_SLICE_DFL:                0
+    07:52:01 [INFO] Unregister scx_cosmos scheduler
+    Error: EXIT: runtime error (ops.init_task() failed (-12) for ksoftirqd/0[15]) on CPU 16
+    [ERROR]: Failed to start scheduler (attempt 4/5)
+    07:52:01 [INFO] scheduler options: scx_cosmos
+      runtime error (ops.init_task() failed (-12) for ksoftirqd/0[15])
+                     SCX_EV_REFILL_SLICE_DFL:                0
+    07:52:01 [INFO] Unregister scx_cosmos scheduler
+    Error: EXIT: runtime error (ops.init_task() failed (-12) for ksoftirqd/0[15]) on CPU 16
+    [ERROR]: Failed to start scheduler (attempt 5/5)
+
+================================================== TEST 3: cosmos, --disable-cpufreq
+  target: cosmos [--disable-cpufreq]
+  pre   : ops=cake_1.2.1_x86_64_unknown_linux_gnu state=enabled
+    scxctl: error: unexpected argument '--disable-cpufreq' found
+    scxctl: 
+    scxctl: Usage: scxctl switch <--sched <SCHED>|--mode <MODE>|--args <ARGS>>
+    scxctl: 
+    scxctl: For more information, try '--help'.
+  attach: 21195 ms   ops='cake_1.2.1_x86_64_unknown_linux_gnu' state=enabled
+  after 5 s: ops='cake_1.2.1_x86_64_unknown_linux_gnu' state=enabled
+  VERDICT  : NO SWITCH (target never attached)
+  banner:
+    07:52:01 [INFO] Unregister scx_cosmos scheduler
+    Error: EXIT: runtime error (ops.init_task() failed (-12) for ksoftirqd/0[15]) on CPU 16
+    [ERROR]: Failed to start scheduler (attempt 4/5)
+    07:52:01 [INFO] scheduler options: scx_cosmos
+      runtime error (ops.init_task() failed (-12) for ksoftirqd/0[15])
+                     SCX_EV_REFILL_SLICE_DFL:                0
+    07:52:01 [INFO] Unregister scx_cosmos scheduler
+    Error: EXIT: runtime error (ops.init_task() failed (-12) for ksoftirqd/0[15]) on CPU 16
+    [ERROR]: Failed to start scheduler (attempt 5/5)
+    23:52:05 [INFO]    slice   3000µs · queues 24 per-CPU vtime + 1 global wake
+
+=== W0c summary ===
+    target: bpfland [-m all]
+    VERDICT  : NO SWITCH (target never attached)
+    target: cosmos 
+    VERDICT  : DIED (attached then torn down)
+    target: cosmos [--disable-cpufreq]
+    VERDICT  : NO SWITCH (target never attached)
+
+final: ops=cake_1.2.1_x86_64_unknown_linux_gnu state=enabled

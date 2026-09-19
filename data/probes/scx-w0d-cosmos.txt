@@ -1,0 +1,79 @@
+=== W0d --args plumbing + cosmos viability — 2026-09-19T07:52:52+08:00 ===
+start: ops='cake_1.2.1_x86_64_unknown_linux_gnu' state=enabled
+
+================================================== A: --args equals form (control) — bpfland -m all
+  target: bpfland --args=-m all 
+  pre   : ops=cake_1.2.1_x86_64_unknown_linux_gnu state=enabled
+    scxctl: switched to Bpfland with arguments "-m all"
+  attach: 1702 ms   ops='bpfland_1.1.3_x86_64_unknown_linux_gnu' state=enabling
+  after 5 s: ops='bpfland_1.1.3_x86_64_unknown_linux_gnu' state=enabled
+  VERDICT  : SURVIVED
+  banner:
+    07:52:58 [INFO] scheduler options: scx_bpfland -m all
+    07:52:58 [INFO] primary CPU domain = 0xffffff
+    07:52:58 [INFO] cpufreq performance level: max
+
+================================================== B: cosmos shipped default
+  target: cosmos  
+  pre   : ops=cake_1.2.1_x86_64_unknown_linux_gnu state=enabled
+    scxctl: switched to Cosmos in Auto mode
+  attach: 1179 ms   ops='cosmos_1.1.6_x86_64_unknown_linux_gnu' state=disabling
+  after 5 s: ops='' state=disabled
+  VERDICT  : DIED (attached then torn down)
+  banner:
+    Error: EXIT: runtime error (ops.init_task() failed (-12) for ksoftirqd/0[15]) on CPU 16
+    [ERROR]: Failed to start scheduler (attempt 4/5)
+    07:53:10 [INFO] scheduler options: scx_cosmos
+    07:53:10 [INFO] Setting up performance counters for 24 CPUs...
+    07:53:10 [INFO] Performance counters configured successfully for all CPUs
+      runtime error (ops.init_task() failed (-12) for ksoftirqd/0[15])
+    Error: EXIT: runtime error (ops.init_task() failed (-12) for ksoftirqd/0[15]) on CPU 16
+    [ERROR]: Failed to start scheduler (attempt 5/5)
+
+================================================== C: cosmos -c 50 (locality engine on)
+  target: cosmos --args=-c 50 
+  pre   : ops=cake_1.2.1_x86_64_unknown_linux_gnu state=enabled
+    scxctl: switched to Cosmos with arguments "-c 50"
+  attach: 972 ms   ops='cosmos_1.1.6_x86_64_unknown_linux_gnu' state=disabling
+  after 5 s: ops='' state=disabled
+  VERDICT  : DIED (attached then torn down)
+  banner:
+    Error: EXIT: runtime error (ops.init_task() failed (-12) for ksoftirqd/0[15]) on CPU 16
+    [ERROR]: Failed to start scheduler (attempt 4/5)
+    07:53:21 [INFO] scheduler options: scx_cosmos -c 50
+    07:53:21 [INFO] Setting up performance counters for 24 CPUs...
+    07:53:21 [INFO] Performance counters configured successfully for all CPUs
+      runtime error (ops.init_task() failed (-12) for ksoftirqd/0[15])
+    Error: EXIT: runtime error (ops.init_task() failed (-12) for ksoftirqd/0[15]) on CPU 16
+    [ERROR]: Failed to start scheduler (attempt 5/5)
+
+================================================== D: cosmos loader Gaming mode (-s 700)
+  target: cosmos  --mode=Gaming
+  pre   : ops=cake_1.2.1_x86_64_unknown_linux_gnu state=enabled
+    scxctl: error: invalid value 'Gaming' for '--mode <MODE>': Gaming is not supported
+    scxctl: 
+    scxctl: For more information, try '--help'.
+  attach: 12706 ms   ops='cake_1.2.1_x86_64_unknown_linux_gnu' state=enabled
+  after 5 s: ops='cake_1.2.1_x86_64_unknown_linux_gnu' state=enabled
+  VERDICT  : NO SWITCH (never attached)
+  banner:
+    Error: EXIT: runtime error (ops.init_task() failed (-12) for ksoftirqd/0[15]) on CPU 16
+    [ERROR]: Failed to start scheduler (attempt 4/5)
+    07:53:21 [INFO] scheduler options: scx_cosmos -c 50
+    07:53:21 [INFO] Setting up performance counters for 24 CPUs...
+    07:53:21 [INFO] Performance counters configured successfully for all CPUs
+      runtime error (ops.init_task() failed (-12) for ksoftirqd/0[15])
+    Error: EXIT: runtime error (ops.init_task() failed (-12) for ksoftirqd/0[15]) on CPU 16
+    [ERROR]: Failed to start scheduler (attempt 5/5)
+
+=== W0d summary ===
+    target: bpfland --args=-m all 
+    VERDICT  : SURVIVED
+    target: cosmos  
+    VERDICT  : DIED (attached then torn down)
+    target: cosmos --args=-c 50 
+    VERDICT  : DIED (attached then torn down)
+    target: cosmos  --mode=Gaming
+    VERDICT  : NO SWITCH (never attached)
+
+final: ops=cake_1.2.1_x86_64_unknown_linux_gnu state=enabled

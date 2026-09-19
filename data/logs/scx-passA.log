@@ -1,0 +1,75 @@
+=== scx A/B run: 4 arms x 5 reps, scale=1.0 ===
+    arms: bore, cake, bpfland, pandemonium
+    results -> $HOME/fs-latency/scx-results.jsonl
+
+--- rep 0  order: bore -> cake -> bpfland -> pandemonium
+    set_arm bore: ok=True attach=1111ms ops='' state=disabled
+    slot done: valid=True bogo_rate=7829.1 wk99=1482 hb=2.72
+    [ok ] bore           58.3s  
+    set_arm cake: ok=True attach=9ms ops='cake_1.2.1_x86_64_unknown_linux_gnu' state=enabled
+    slot done: valid=True bogo_rate=7674.91 wk99=2172 hb=5.277
+    [ok ] cake           57.6s  
+    set_arm bpfland: ok=True attach=1119ms ops='bpfland_1.1.3_x86_64_unknown_linux_gnu' state=enabled
+    slot done: valid=True bogo_rate=7608.23 wk99=2740 hb=2.877
+    [ok ] bpfland        57.8s  
+    set_arm pandemonium: ok=True attach=1917ms ops='pandemonium_5.20.0_x86_64_unknown_linux_gnu' state=enabled
+    slot done: valid=True bogo_rate=7757.64 wk99=2396 hb=2.747
+    [ok ] pandemonium    57.9s  
+
+--- rep 1  order: cake -> bpfland -> pandemonium -> bore
+    set_arm cake: ok=True attach=10ms ops='cake_1.2.1_x86_64_unknown_linux_gnu' state=enabled
+    slot done: valid=True bogo_rate=7709.73 wk99=1970 hb=5.233
+    [ok ] cake           57.5s  
+    set_arm bpfland: ok=True attach=1634ms ops='bpfland_1.1.3_x86_64_unknown_linux_gnu' state=enabled
+    slot done: valid=True bogo_rate=7643.23 wk99=2820 hb=2.79
+    [ok ] bpfland        58.2s  
+    set_arm pandemonium: ok=True attach=1813ms ops='pandemonium_5.20.0_x86_64_unknown_linux_gnu' state=enabled
+    slot done: valid=True bogo_rate=7718.64 wk99=2436 hb=2.77
+    [ok ] pandemonium    62.1s  
+    set_arm bore: ok=True attach=1011ms ops='' state=disabled
+    slot done: valid=True bogo_rate=7818.09 wk99=1102 hb=2.686
+    [ok ] bore           58.1s  
+
+--- rep 2  order: bpfland -> pandemonium -> bore -> cake
+    set_arm bpfland: ok=True attach=1516ms ops='bpfland_1.1.3_x86_64_unknown_linux_gnu' state=enabled
+    slot done: valid=True bogo_rate=7618.39 wk99=2924 hb=2.795
+    [ok ] bpfland        60.0s  
+    set_arm pandemonium: ok=True attach=1915ms ops='pandemonium_5.20.0_x86_64_unknown_linux_gnu' state=enabled
+    slot done: valid=True bogo_rate=7685.43 wk99=2868 hb=2.765
+    [ok ] pandemonium    59.0s  
+    set_arm bore: ok=True attach=411ms ops='' state=disabled
+    slot done: valid=True bogo_rate=7741.83 wk99=979 hb=2.702
+    [ok ] bore           57.0s  
+    set_arm cake: ok=True attach=8ms ops='cake_1.2.1_x86_64_unknown_linux_gnu' state=enabled
+    slot done: valid=True bogo_rate=7683.85 wk99=2092 hb=5.361
+    [ok ] cake           57.7s  
+
+--- rep 3  order: pandemonium -> bore -> cake -> bpfland
+    set_arm pandemonium: ok=True attach=1131ms ops='pandemonium_5.20.0_x86_64_unknown_linux_gnu' state=enabled
+    slot done: valid=True bogo_rate=7691.44 wk99=2364 hb=2.778
+    [ok ] pandemonium    58.3s  
+    set_arm bore: ok=True attach=411ms ops='' state=disabled
+    slot done: valid=True bogo_rate=7557.17 wk99=1406 hb=2.854
+    [ok ] bore           57.7s  
+    set_arm cake: ok=True attach=10ms ops='cake_1.2.1_x86_64_unknown_linux_gnu' state=enabled
+    slot done: valid=True bogo_rate=7665.86 wk99=2252 hb=5.275
+    [ok ] cake           57.4s  
+    set_arm bpfland: ok=True attach=1211ms ops='bpfland_1.1.3_x86_64_unknown_linux_gnu' state=enabled
+    slot done: valid=True bogo_rate=7576.29 wk99=2836 hb=2.96
+    [ok ] bpfland        59.5s  
+
+--- rep 4  order: bore -> cake -> bpfland -> pandemonium
+    set_arm bore: ok=True attach=1115ms ops='' state=disabled
+    slot done: valid=True bogo_rate=7769.01 wk99=1062 hb=2.728
+    [ok ] bore           57.7s  
+    set_arm cake: ok=True attach=10ms ops='cake_1.2.1_x86_64_unknown_linux_gnu' state=enabled
+    slot done: valid=True bogo_rate=8082.44 wk99=1218 hb=5.183
+    [ok ] cake           57.0s  
+    set_arm bpfland: ok=True attach=1637ms ops='bpfland_1.1.3_x86_64_unknown_linux_gnu' state=enabled
+    slot done: valid=True bogo_rate=7698.68 wk99=2620 hb=2.49
+    [ok ] bpfland        59.0s  
+    set_arm pandemonium: ok=True attach=2121ms ops='pandemonium_5.20.0_x86_64_unknown_linux_gnu' state=enabled
+    slot done: valid=True bogo_rate=8092.41 wk99=2092 hb=2.688
+    [ok ] pandemonium    58.5s  
+
+=== run complete in 19.4 min ===
